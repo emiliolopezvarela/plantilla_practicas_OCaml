@@ -1,7 +1,6 @@
 # 🧩 Plantilla para organizar prácticas en OCaml
 
-Os presento aquí una **plantilla base** para organizar las prácticas de la asignatura y facilitar las pruebas de vuestro código.  
-Existen muchas formas de estructurar vuestro proyectos, esta solo es una de ellas. Intentar siempre **mantener cierta organización** en vuestros proyectos/prácticas para poder **probar fácilmente vuestras funciones** y **facilitar cualquier revisión** del código/trabajo en el futuro.
+Os presento aquí una **plantilla base** para organizar las prácticas de la asignatura y facilitar las pruebas de vuestro código. Existen muchas formas de estructurar vuestro proyectos, esta solo es una de ellas. Intentar siempre **mantener cierta organización** en vuestros proyectos/prácticas para poder **probar fácilmente vuestras funciones** y **facilitar cualquier revisión** del código/trabajo en el futuro.
 
 > 💡 En un proyecto más grande, normalmente existiría un archivo `main.ml` que importaría las librerías (`src/`) y las usaría, en lugar de centralizar todo en `tests/`.
 
