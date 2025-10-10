@@ -4,7 +4,7 @@
 let incr = function x -> x + 1
 let incr_2 x = x + 1
 
-(* Como sustituir in por function *) (* (function x -> 2 * x) (2 + 1) *)
+(* Como sustituir function por in *) (* (function x -> 2 * x) (2 + 1) *)
 let result = let doble x = 2 * x in doble (2 + 1)
 
 (* Pattern matching sobre option usando `function` *)

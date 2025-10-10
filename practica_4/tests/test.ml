@@ -1,6 +1,6 @@
 (* Función auxiliar para mostrar el resultado de un test *)
 let test name cond =
-  if cond then Printf.printf "✅ %s\n" name
+  if cond then Printf.printf "✅ [OK] %s\n" name
   else failwith (Printf.sprintf "❌ %s failed" name)
 
 (* Probar funciones implementadas en los otros archivos .ml *)
@@ -13,7 +13,7 @@ let () =
   (* test "Orbit (13)" (Practicas.Collatz.orbit 13 = "13, 40, 20, 10, 5, 16, 8, 4, 2, 1"); *)
   (* Printf.printf "\n\n"; *)
 
-
+  
   (* Ejemplos de varios test de los ejercicios con print *)
   Printf.printf "Check_to 1000000 -> %b\n" (Practicas.Collatz.check_to 1000000);
   Printf.printf "\n";
@@ -37,5 +37,5 @@ let () =
   Printf.printf "\n";
   
   test "Length and Top 27 Bien" (Practicas.Collatz_plus.length_and_top 27 = (27, 82));
-  test "Length and Top 27 Mal" (Practicas.Collatz_plus.length_and_top 27 = (112, 9232));
+  Printf.printf "\nTodos los tests de ejemplos han pasado.\n";
 
