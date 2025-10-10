@@ -10,11 +10,13 @@ Os presento aquí una **plantilla base** para organizar las prácticas de la asi
 
 ## 🗂️ Estructura general
 
-La carpeta de `practicas` sigue este esquema general. Cada práctica (practica_4, practica_5, etc) sigue el esquema de **practica_X**. Además, el repositorio incluye un script `run_practica.sh` para **compilar y ejecutar rápidamente** la práctica seleccionada.
+La carpeta de `practicas` sigue este esquema general. Cada práctica (practica_4, practica_5, etc) sigue el esquema de **practica_X**. Además, el repositorio incluye un script `run_practica` para **compilar y ejecutar rápidamente** la práctica seleccionada.
 
 ```
 practicas               # Carpeta Principal
- ├── run_practica.sh        # Script para compilar y ejectuar (Ubuntu)
+ ├── run_practica.sh         # Script para compilar y ejectuar (Ubuntu -> bash)
+ ├── run_practica.bat        # Script para compilar y ejectuar (Windows -> CMD o PowerShell)
+ ├── run_practica.ps1        # Script para compilar y ejectuar (Windows -> PowerShell)
  ├── practica_X/
       ├── instrucciones/        # Enunciados, PDFs
       ├── src/                  # Código fuente (.ml, .mli) y (dune)
@@ -26,7 +28,12 @@ practicas               # Carpeta Principal
 
 ## ▶️ Uso rápido del script
 
-Podéis **editar las variables iniciales** del script para elegir qué práctica compilar y qué test ejecutar sin tener que cambiar comandos cada vez. Simplemente abrid el archivo con un editor de texto (vscode) y modificad el valor de:
+Este script:
+- Activa el entorno de OCaml (si usas `opam`),
+- Compila el proyecto con `dune build`,
+- Y ejecuta los tests correspondientes (por defecto `tests/test.ml`).
+
+Podéis **editar las variables iniciales** que va usar el script para elegir qué práctica compilar y qué test ejecutar sin tener que cambiar comandos cada vez. Simplemente abrid el archivo `run_practica` que vas a usar con un editor de texto (vscode) y modificad el valor de:
 
 ```bash
 PRACTICA="practica_4"    # Nombre de la carpeta (Eg -> practica_4)
@@ -34,15 +41,28 @@ PRACTICA="practica_4"    # Nombre de la carpeta (Eg -> practica_4)
 
 Para usar el script, desde la raíz del repositorio:
 
+### 🐧 En Ubuntu / Linux (bash)
 ```bash
 chmod +x run_practica.sh   # solo la primera vez (agregar permiso de ejecucion)
 ./run_practica.sh
 ```
 
-Este script:
-- Activa el entorno de OCaml (si usas `opam`),
-- Compila el proyecto con `dune build`,
-- Y ejecuta los tests correspondientes (por defecto `tests/test.ml`).
+### 💻 En Windows (CMD o PowerShell)
+- Si usas **CMD**, ejecuta el script `.bat` directamente:
+```cmd
+run_practica.bat
+```
+
+- Si usas **PowerShell**, ejecuta el script `.ps1`:
+```powershell
+.\run_practica.ps1
+```
+
+> ⚠️ **Aviso (PowerShell):** En algunos sistemas Windows la ejecución de scripts de PowerShell está **restringida por defecto**, y puede aparecer un error. Para permitir la ejecución **temporalmente** en la sesión actual, usa este comando antes de ejecutarlo:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
 
 ---
 
