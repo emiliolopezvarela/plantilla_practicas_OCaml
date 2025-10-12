@@ -2,7 +2,7 @@
 REM ==============================
 REM Configuración
 REM ==============================
-set PRACTICA=practica_4
+set PRACTICA=practica_X
 set TEST=test
 
 REM ==============================
@@ -36,4 +36,5 @@ dune exec "tests/%TEST%.exe"
 REM ==============================
 REM Volver a la carpeta del proyecto
 REM ==============================
+
 cd ".."
