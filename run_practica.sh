@@ -4,7 +4,7 @@
 set -e
 
 # Puedes fijar aquí una práctica (nombre de carpeta) y un test (nombre archivo .ml) para compilar y ejecutar:
-PRACTICA="practica_4"    # Nombre carpeta (Eg -> practica_4 | ejemplos_utiles)
+PRACTICA="practica_X"    # Nombre carpeta (Eg -> practica_4 | ejemplos_utiles)
 TEST="test"              # Nombre archivo sin .ml
 
 # Comprobar si tienes instalado el ambiente virtual y activarlo
