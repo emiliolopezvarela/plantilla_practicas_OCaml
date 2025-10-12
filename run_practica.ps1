@@ -1,7 +1,7 @@
 # ==============================
 # Configuración
 # ==============================
-$Practica = "practica_4"
+$Practica = "practica_X"
 $Test = "test"
 
 # ==============================
@@ -35,3 +35,4 @@ dune exec "tests/$Test.exe"
 # Volver a la carpeta del proyecto
 # ==============================
 Set-Location ..
+
