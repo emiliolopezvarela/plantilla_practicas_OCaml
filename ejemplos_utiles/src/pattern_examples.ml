@@ -76,5 +76,5 @@ let rec describe_temp n =
       else "warm odd"
   | x when x > 10 ->
       (* si la temperatura es muy alta, "enfriamos" recursivamente *)
-      "too hot → " ^ describe_temp (x - 10)
+      "too hot → " ^ describe_temp (x - 10) (* OJO que esto no es eficiente en memoria *)
   | _ -> "undefined"
